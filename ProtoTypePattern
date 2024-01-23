@@ -1,0 +1,12 @@
+Cloning of an existing object instead of creating new one and can also be customized as per the requirement.
+
+interface Prototype {
+    public Prototype getClone();  
+}
+
+
+EmployeeRecord e1=new EmployeeRecord(eid,ename,edesignation,esalary,eaddress);  
+          
+e1.showRecord();  
+System.out.println("\n");  
+EmployeeRecord e2=(EmployeeRecord) e1.getClone();  
