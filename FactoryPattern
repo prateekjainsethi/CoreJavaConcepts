@@ -1,0 +1,36 @@
+define an interface or abstract class for creating an object but let the subclasses decide which class to instantiate.
+
+abstact class Plan {
+
+   private rate;
+   abstract void getRate()
+   public void getBill(int unit) {
+      S.o.p(unit*rate)
+   }
+
+}
+
+class Domestic extends Plan {
+    public void getRate() {
+        rate = 3.50;
+    }
+}
+
+class Commercial extends Plan {
+    public void getRate() {
+        rate = 4.50;
+    }
+}
+
+public class GetPlanfactory {
+   public Plan getPlan(String planType) {
+      if (tye.equals("domestic"))
+      else if (type.equals("commercial"))
+      else 
+       return null;
+  }
+}
+
+Plan p = planfactory.getPlan("domestic");
+p.getRate();
+p.getBill();
