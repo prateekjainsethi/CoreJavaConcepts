@@ -1,0 +1,45 @@
+define a class that has only one instance and provides a global point of access to it"
+
+There are two forms of singleton design pattern
+
+Early Instantiation: creation of instance at load time.
+Lazy Instantiation: creation of instance when required.
+
+Early
+
+class EarlySingleTon {
+    private static EarlySingleTon earlySingleTon = new EarlySingleTon();
+
+    private EarlySingleTon() {}
+
+    public static EarlySingleTon getObj() {
+        return earlySingleTon;
+    }
+}
+
+
+Singleton pattern is mostly used in multi-threaded and database applications. It is used in logging, caching, thread pools, configuration settings etc.
+
+Class SingletonClass {
+
+private static SingletonClass singletonclass = null;
+
+private SingletonClass() {
+
+}
+
+public Synchronized SingletonClass getSingletonClassObject() {
+      if (singletonclass == null)
+         singletonclass = new singletonclass();
+
+      return singletonclass;
+}
+
+
+main() {
+    SingleTon obj1 = getSingletonClassObject();
+    SingleTon obj2 = getSingletonClassObject();
+}
+
+
+}
