@@ -1,0 +1,24 @@
+just provide a unified and simplified interface to a set of interfaces in a subsystem, therefore it hides the complexities of the subsystem from the client
+
+
+Client will use a once interface/class which will have all list of Class Implementation
+
+Client   ---->   MobileShop  ------> (Iphone, blackberry, Android)
+
+Class MobilePhone
+
+class Iphone implements MobileShop
+class BlackBerry implements MobileShop
+class Android implements MobileShop
+
+class ShopKeeper {
+   private MobilePhone iphone;
+   private MobilePhone balckBerry;
+   private MobilePhone android;
+
+   ShopKeeper() {
+      iphone = new Iphone();
+      balckBerry = new BlackBerry();
+      android = new Android();
+   }
+}
